@@ -18,6 +18,8 @@ def web
   @web ||= Mechanize.new
 end
 
+DOCSET = 'Apache.docset'
+DOCSET_ARCHIVE = File.basename(DOCSET, '.docset') + '.tgz'
 DEFAULT_VERSION = Version(File.read('VERSION').chomp)
 DEFAULT_LANGUAGE = 'en'
 DOCS_URI = URI('http://www.apache.org/dyn/mirrors/mirrors.cgi/httpd/docs/')
@@ -59,12 +61,12 @@ task :fetch, [:version] do |t, args|
   end
 end
 
-desc 'Build Apache.docset in the current directory.'
+desc 'Build a docset in the current directory.'
 task :build, [:version] do |t, args|
   version = args[:version] ? Version(args[:version]) : DEFAULT_VERSION
 
   filename = FILENAME_FORMAT % version
-  target = 'Apache.docset'
+  target = DOCSET
   docdir = File.join(target, 'Contents/Resources/Documents')
 
   Rake::Task['fetch'].invoke(version.to_s) unless File.file?(filename)
@@ -121,6 +123,11 @@ task :build, [:version] do |t, args|
       }
     }
   }
+end
+
+desc 'Archive the generated docset into a tarball'
+task :archive do
+  sh 'tar', '-zcf', DOCSET_ARCHIVE, '--exclude=.DS_Store', DOCSET
 end
 
 task :default => :build
