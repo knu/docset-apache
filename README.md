@@ -36,7 +36,7 @@ License
 
 This build script suite is:
 
-Copyright (c) 2014 Akinori MUSHA
+Copyright (c) 2014 [Akinori MUSHA](https://akinori.org/)
 
 Licensed under the 2-clause BSD license.
 See `LICENSE` for details.
