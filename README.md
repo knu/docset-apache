@@ -14,7 +14,7 @@ Requirements
 
 Mac OS X Mavericks has all these necessary tools out of the box.
 
-- ruby(1) - 1.9.3 or later
+- ruby(1) - 1.9.3 or later, with Bundler installed via gem(1)
 
 - sips(1)
 
