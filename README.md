@@ -24,6 +24,13 @@ To view a generated docset, you need of course:
 
 - [Dash.app](http://kapeli.com/dash)
 
+References
+----------
+
+- [GitHub Project](https://github.com/knu/docset-apache)
+
+- [Apache HTTP Server Documentation](http://httpd.apache.org/docs/)
+
 License
 -------
 
