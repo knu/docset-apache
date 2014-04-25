@@ -20,6 +20,10 @@ Mac OS X Mavericks has all these necessary tools out of the box.
 
 - tar(1) - must be bsdtar that supports zip files
 
+To view a generated docset, you need of course:
+
+- [Dash.app](http://kapeli.com/dash)
+
 License
 -------
 
@@ -29,3 +33,9 @@ Copyright (c) 2014 Akinori MUSHA
 
 Licensed under the 2-clause BSD license.
 See `LICENSE` for details.
+
+A generated docset will be:
+
+Copyright 2014 The Apache Software Foundation.
+
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
